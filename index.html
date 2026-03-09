@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes">
+    <title>আঙ্গর বাজার - আপনার বিশ্বস্ত অনলাইন শপ</title>
+    
+    <!-- Font Awesome 6 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- AOS Animation -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+    
+    <style>
+        /* ফন্ট অসম কাজ না করলে এই ফ্যালব্যাক স্টাইল */
+        .fa-regular, .fa-solid, .fa-brands {
+            font-family: "Font Awesome 6 Free", "Font Awesome 6 Brands", "Font Awesome 6 Solid", sans-serif;
+        }
+    </style>
+</head>
+<body>
+    <!-- Preloader -->
+    <div id="preloader">
+        <div class="loader-content">
+            <img class="loader-logo" src="https://res.cloudinary.com/doirlqqmx/image/upload/v1753706940/file_00000000365061f68e458716aa2787c3_pnwqym.png" alt="Angor Bazar">
+            <div class="loader-text">আঙ্গর বাজার</div>
+        </div>
+    </div>
+
+    <!-- Announcement Bar -->
+    <div class="announcement">
+        <div class="announcement-content">
+            <div class="announcement-left">
+                <i class="fa-solid fa-truck-fast"></i> ফ্রি ডেলিভারি সারাদেশে
+            </div>
+            <div class="announcement-right">
+                <span><i class="fa-regular fa-clock"></i> ২৪/৭ সাপোর্ট</span>
+                <span><i class="fa-solid fa-gift"></i> অর্ডার করুন এখনই</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Navigation with Header Cart -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <img src="https://res.cloudinary.com/doirlqqmx/image/upload/v1753706940/file_00000000365061f68e458716aa2787c3_pnwqym.png" alt="Angor Bazar">
+                <span>MawnaFy</span>
+            </div>
+            <div class="nav-menu">
+                <a href="index.html" class="nav-link">হোম</a>
+                <a href="products.html" class="nav-link">পণ্য</a>
+                <a href="offer/index.html" class="nav-link">অফার</a>
+                <a href="blog.html" class="nav-link">ব্লগ</a>
+                <a href="contact.html" class="nav-link">যোগাযোগ</a>
+            </div>
+            <div class="nav-buttons">
+                <button class="nav-btn nav-btn-outline" onclick="window.open('https://maker.mawnafy.shop','_blank')">
+                    <i class="fa-solid fa-crown"></i> মেকার
+                </button>
+                <button class="nav-btn nav-btn-primary" onclick="window.open('https://track.mawnafy.shop','_blank')">
+                    <i class="fa-solid fa-location-dot"></i> ট্র্যাক
+                </button>
+                <!-- Header Cart -->
+                <div class="header-cart" id="headerCart">
+                    <div class="header-cart-icon">
+                        <i class="fa-solid fa-cart-shopping"></i>
+                        <span class="header-cart-count" id="cartCount">0</span>
+                    </div>
+                    <div class="header-cart-total" id="cartTotal">BDT 0</div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-container">
+            <div class="hero-content" data-aos="fade-right">
+                <div class="hero-badge">ট্রাস্টেড ই-কমার্স প্ল্যাটফর্ম</div>
+                <h1 class="hero-title">সেরা পণ্য <span>সেরা দামে</span> পৌঁছে দেই আপনার দোরগোড়ায়</h1>
+                <p class="hero-description">আমরা নিয়ে এসেছি হাজারো পণ্য আপনার দোরগোড়ায়। ফ্রি ডেলিভারি ও ক্যাশ অন ডেলিভারি সুবিধা।</p>
+                <div class="hero-stats">
+                    <div class="stat-item">
+                        <div class="stat-number">৫০k+</div>
+                        <div class="stat-label">সন্তুষ্ট গ্রাহক</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">১০k+</div>
+                        <div class="stat-label">পণ্য</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">২৪/৭</div>
+                        <div class="stat-label">সাপোর্ট</div>
+                    </div>
+                </div>
+            </div>
+            <div class="hero-image" data-aos="fade-left">
+                <img src="https://images.unsplash.com/photo-1607082348824-0a96f2a4b9da?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80" alt="Shopping">
+                <div class="floating-card">
+                    <i class="fa-regular fa-circle-check"></i>
+                    <div>
+                        <strong>ফ্রি ডেলিভারি</strong>
+                        <p style="font-size: 0.8rem; color: var(--neutral-600);">সারাদেশে</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Search Section -->
+    <div class="search-section" data-aos="fade-up">
+        <div class="search-wrapper">
+            <i class="fa-solid fa-magnifying-glass search-icon"></i>
+            <input type="text" id="searchInput" placeholder="পণ্যের নাম লিখুন... (যেমন: চকলেট, শার্ট)">
+            <div class="search-filters">
+                <span class="filter-chip active" data-filter="all">সব</span>
+                <span class="filter-chip" data-filter="free">ফ্রি ডেলিভারি</span>
+                <span class="filter-chip" data-filter="new">নতুন</span>
+            </div>
+            <button class="search-btn" id="searchBtn"><i class="fa-solid fa-search"></i> খুঁজুন</button>
+        </div>
+    </div>
+
+    <!-- Products Section -->
+    <section class="product-section">
+        <div class="section-header">
+            <h2 class="section-title">জনপ্রিয় <span>পণ্যসমূহ</span></h2>
+            <a href="#" class="view-all">সবগুলো দেখুন <i class="fa-solid fa-arrow-right"></i></a>
+        </div>
+        <div class="product-grid" id="productSection"></div>
+        <div style="text-align: center; margin-top: 30px;">
+            <button id="nextButton" class="nav-btn nav-btn-primary" style="padding: 12px 30px;">আরও পণ্য লোড করুন</button>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features">
+        <div class="features-grid">
+            <div class="feature-item" data-aos="fade-up">
+                <div class="feature-icon"><i class="fa-solid fa-truck"></i></div>
+                <h3 class="feature-title">ফ্রি ডেলিভারি</h3>
+                <p class="feature-desc">সারাদেশে ফ্রি ডেলিভারি</p>
+            </div>
+            <div class="feature-item" data-aos="fade-up" data-aos-delay="100">
+                <div class="feature-icon"><i class="fa-solid fa-shield"></i></div>
+                <h3 class="feature-title">১০০% নিরাপদ</h3>
+                <p class="feature-desc">নিরাপদ পেমেন্ট</p>
+            </div>
+            <div class="feature-item" data-aos="fade-up" data-aos-delay="200">
+                <div class="feature-icon"><i class="fa-regular fa-clock"></i></div>
+                <h3 class="feature-title">২৪/৭ সাপোর্ট</h3>
+                <p class="feature-desc">যেকোনো সময়</p>
+            </div>
+            <div class="feature-item" data-aos="fade-up" data-aos-delay="300">
+                <div class="feature-icon"><i class="fa-solid fa-rotate-left"></i></div>
+                <h3 class="feature-title">৭ দিন রিটার্ন</h3>
+                <p class="feature-desc">সন্তুষ্ট না হলে</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- WhatsApp Button -->
+    <a href="https://wa.me/8801626813764" target="_blank" class="whatsapp-btn">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">
+    </a>
+
+    <!-- Checkout Modal -->
+    <div class="modal-overlay" id="checkoutModal">
+        <div class="modal-container">
+            <button class="modal-close" id="closeCheckoutModal"><i class="fa-solid fa-times"></i></button>
+            <h2 style="font-size: 1.6rem; margin-bottom: 20px;">আপনার কার্ট</h2>
+            
+            <div id="orderIdDisplay" class="order-id-display" style="display: none;"></div>
+            
+            <div id="popupCartList"></div>
+            <div style="background: var(--neutral-100); padding: 15px; border-radius: var(--radius-lg); margin: 15px 0;">
+                <div style="display: flex; justify-content: space-between; margin-bottom: 6px;">
+                    <span>সাবটোটাল:</span>
+                    <span id="popupSubtotal">BDT 0</span>
+                </div>
+                <div style="display: flex; justify-content: space-between; margin-bottom: 6px;">
+                    <span>ডেলিভারি চার্জ:</span>
+                    <span id="popupDeliveryCharge">BDT 0</span>
+                </div>
+                <div style="display: flex; justify-content: space-between; font-weight: 700; font-size: 1.1rem; border-top: 1px solid var(--neutral-300); padding-top: 10px; margin-top: 10px;">
+                    <span>সর্বমোট:</span>
+                    <span id="popupFinalTotal">BDT 0</span>
+                </div>
+            </div>
+            
+            <form id="orderForm">
+                <input type="text" name="name" placeholder="আপনার নাম" required style="width: 100%; padding: 12px; border: 1px solid var(--neutral-300); border-radius: var(--radius-md); margin-bottom: 10px;">
+                
+                <input type="email" name="email" placeholder="ইমেইল ঠিকানা (ঐচ্ছিক)" style="width: 100%; padding: 12px; border: 1px solid var(--neutral-300); border-radius: var(--radius-md); margin-bottom: 10px;">
+                
+                <input type="tel" name="phone" placeholder="মোবাইল নাম্বার (যেমন: 01712345678)" required pattern="[0-9]{11}" style="width: 100%; padding: 12px; border: 1px solid var(--neutral-300); border-radius: var(--radius-md); margin-bottom: 10px;">
+                
+                <textarea name="address" placeholder="ঠিকানা" required style="width: 100%; padding: 12px; border: 1px solid var(--neutral-300); border-radius: var(--radius-md); margin-bottom: 12px; min-height: 80px;"></textarea>
+                
+                <input type="hidden" name="products" id="productsInput">
+                <input type="hidden" name="total" id="totalInput">
+                <input type="hidden" name="orderId" id="orderIdInput">
+                <input type="hidden" name="phone_raw" id="phoneRawInput">
+                
+                <button type="submit" id="submitOrderBtn" style="width: 100%; padding: 14px; background: var(--accent); color: white; border: none; border-radius: var(--radius-md); font-weight: 600; cursor: pointer;">
+                    অর্ডার কনফার্ম করুন
+                </button>
+            </form>
+            
+            <p id="msg" style="text-align: center; margin-top: 12px;"></p>
+        </div>
+    </div>
+
+    <!-- Details Modal -->
+    <div class="modal-overlay" id="detailsModal">
+        <div class="modal-container">
+            <button class="modal-close" id="closeDetailsModal"><i class="fa-solid fa-times"></i></button>
+            <div id="detailContent"></div>
+        </div>
+    </div>
+
+    <!-- Receipt Modal -->
+    <div class="receipt-modal-overlay" id="receiptModal">
+        <div class="receipt-modal-container">
+            <button class="receipt-modal-close" id="closeReceiptModal"><i class="fa-solid fa-times"></i></button>
+            <div id="receiptContent"></div>
+            <div class="receipt-buttons">
+                <button class="receipt-btn receipt-btn-primary" id="downloadPDFBtn">
+                    <i class="fa-regular fa-file-pdf"></i> PDF রসিদ ডাউনলোড করুন
+                </button>
+                <button class="receipt-btn receipt-btn-secondary" id="printReceiptBtn">
+                    <i class="fa-regular fa-print"></i> প্রিন্ট করুন
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Hidden Receipt Template for PDF Generation -->
+    <div id="pdf-receipt"></div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-about">
+                <img src="https://res.cloudinary.com/doirlqqmx/image/upload/v1753706940/file_00000000365061f68e458716aa2787c3_pnwqym.png" alt="Angor Bazar">
+                <p>আঙ্গর বাজার একটি বিশ্বস্ত ই-কমার্স প্ল্যাটফর্ম। আমরা নিয়ে এসেছি হাজারো পণ্য আপনার দোরগোড়ায়।</p>
+            </div>
+            <div class="footer-links">
+                <h4>কুইক লিংক</h4>
+                <ul>
+                    <li><a href="#">আমাদের সম্পর্কে</a></li>
+                    <li><a href="#">যোগাযোগ</a></li>
+                    <li><a href="#">ব্লগ</a></li>
+                    <li><a href="#">ক্যারিয়ার</a></li>
+                </ul>
+            </div>
+            <div class="footer-links">
+                <h4>গ্রাহক সেবা</h4>
+                <ul>
+                    <li><a href="#">প্রাইভেসি নীতি</a></li>
+                    <li><a href="#">রিটার্ন নীতি</a></li>
+                    <li><a href="#">শর্তাবলী</a></li>
+                    <li><a href="#">প্রায়শ জিজ্ঞাসা</a></li>
+                </ul>
+            </div>
+            <div class="footer-links">
+                <h4>যোগাযোগ করুন</h4>
+                <ul>
+                    <li><i class="fa-solid fa-phone"></i> +8801626813764</li>
+                    <li><i class="fa-regular fa-envelope"></i> support@angorbazar.com</li>
+                    <li><i class="fa-solid fa-location-dot"></i> মাওনা, গাজীপুর</li>
+                </ul>
+                <div class="footer-social">
+                    <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 আঙ্গর বাজার - সর্বস্বত্ব সংরক্ষিত | ডেভেলপার: আকাশ সিদ্দিকী</p>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
